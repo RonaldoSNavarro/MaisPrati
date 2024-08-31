@@ -7,7 +7,7 @@ const prompt = require('prompt-sync')();
 
 let somaNumeros = 0;
 let contador = 0;
-let numeroDecimal = 1; // Exemplo de número fornecido
+let numeroDecimal = 1;
 
 while (numeroDecimal !== 0) {
     numeroDecimal = parseFloat(prompt("Digite um número decimal | 0 Para sair: "));
