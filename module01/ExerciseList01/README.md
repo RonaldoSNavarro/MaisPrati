@@ -47,19 +47,19 @@ Após ter todos os pré-requisitos instalados, siga os passos abaixo para execut
 
 Exemplo de comando para executar um arquivo:
 ```bash
-node exercicio1.js
+node Ex01.js
 ```
 Se você estiver usando o VS Code com a extensão Code Runner, pode simplesmente abrir o arquivo JavaScript e pressionar Ctrl + Alt + N para executá-lo.
 
 ### Estrutura do Repositório
 
-1 - exercicio1.js: Verifica se um número é par ou ímpar.
+1 - Ex01.js: Verifica se um número é par ou ímpar.
 
-2 - exercicio2.js: Classifica a idade em categorias.
+2 - Ex02.js: Classifica a idade em categorias.
 
-3 - exercicio3.js: Classifica a nota como "Aprovado", "Recuperação" ou "Reprovado".
+3 - Ex03.js: Classifica a nota como "Aprovado", "Recuperação" ou "Reprovado".
 
-4 - exercicio4.js: Menu interativo com diversas opções.
+4 - Ex04.js: Menu interativo com diversas opções.
 
 outros...: Outros exercícios estão incluídos nos arquivos subsequentes.
 
