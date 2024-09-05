@@ -1,0 +1,17 @@
+ul {
+    color: blue;
+    background-color: rgb(175, 170, 170);
+    border-radius: 5px;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+}
+
+ul:hover {
+    background-color: grey;
+}
+
+#ultimo {
+    color: green;
+    font-style: italic;
+}
