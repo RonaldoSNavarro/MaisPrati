@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <form id="contactForm">
+            <h2>Contato</h2>
+
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+
+            <label for="phone">Telefone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Digite seu telefone" pattern="[0-9]{10,11}" required>
+
+            <label for="subject">Assunto:</label>
+            <select id="subject" name="subject" required>
+                <option value="">Selecione</option>
+                <option value="duvida">Dúvida</option>
+                <option value="suporte">Suporte</option>
+                <option value="feedback">Feedback</option>
+            </select>
+
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" placeholder="Digite sua mensagem" required></textarea>
+
+            <label class="checkbox">
+                <input type="checkbox" id="terms" name="terms" required>
+                Aceito os Termos de Uso
+            </label>
+
+            <button type="submit" id="submitBtn" disabled>Enviar</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
