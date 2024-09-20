@@ -54,7 +54,7 @@ function editTask(li) {
         input.type = 'text'
         input.value = li.firstChild.textContent
 
-        li.firstChild.replaceWitch(input)
+        li.firstChild.replaceWith(input)
 
         input.addEventListener('blur', () => {
             li.classList.remove('editing')
@@ -71,3 +71,27 @@ function editTask(li) {
         input.focus()
     }
 }
+
+filters.forEach(filter => {
+    filter.addEventListener('click', () => {
+        filters.forEach(f => f.classList.remove('active-filter'))
+        filter.classList.add('active-filter')
+
+        let filterType = filter.id
+        let allTasks = taskList.querySelectorAll('li')
+
+        allTasks.forEach(task => {
+            switch(filterType) {
+                case 'filter-all': 
+                    task.style.display = ''
+                    break
+                case 'filter-completed' :
+                    task.style.display = task.classList.contains('completed') ? '' : 'none'
+                    break
+                case 'filter-not-completed' :
+                    task.style.display = task.classList.contains('completed') ? 'none' : ''
+                    break
+            }
+        })
+    })
+})
