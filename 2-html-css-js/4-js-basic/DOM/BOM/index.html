@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM - Browser Object Model</title>
+    <script>
+        let myWindow
+
+        function openWin(){
+            myWindow = window.open("", "myWindow", "width=200", "height=100")
+            myWindow.document.write("<p>Nova janela aberta</p>")
+        }
+
+        function closeWin() {
+            if(myWindow) {
+                window.close()
+            }
+        }
+
+        let height = window.screen.availHeight
+        let width = window.screen.availWidth
+
+        document.write('A altura do navegador: ' + height + 'px<br>')
+        document.write('Largura do navegador: ' + width + 'px<br>')
+        
+        // window.setTimeout(() => {
+        //     document.write('Olá, mundo!<br>')
+        // }, 3000)
+
+        // let i = 10
+
+        // let j = window.setInterval(() => {
+        //     document.write(i + '<br>')
+        //     i--
+        //     if (i === 0) {
+        //         clearInterval(j)
+        //         document.write('Contagem finalizada')
+        //     }
+        // }, 2000)
+
+        function redirectTo(url) {
+            window.location.href = url
+        }
+
+        function alterarTexto() {
+            window.setTimeout(() => {
+                document.write('Texto alterado!<br>')
+            }, 3000)
+        }
+
+        function contador() {
+            let i = 1
+
+            let j = window.setInterval(() => {
+                document.write(i + '<br>')
+                i++
+                if (i > 10) {
+                    clearInterval(j)
+                    document.write('Contagem finalizada')
+                }
+            }, 1000)
+        }
+
+    </script>
+</head>
+<body>
+    <button onclick="openWin()">Abrir Janela</button>
+    <button onclick="closeWin()">Fechar Janela</button>
+    <button onclick="window.print()">Imprimir Janela</button>
+    <button onclick="alterarTexto()">Alterar texto</button>
+    <button onclick="contador()">Contar até 10</button>
+    <button onclick="window.history.back()">Voltar</button>
+    <button onclick="window.history.forward()">Avançar</button>
+
+    <button onclick="redirectTo('https://www.google.com')">Acessar Google</button>
+</body>
+</html>
