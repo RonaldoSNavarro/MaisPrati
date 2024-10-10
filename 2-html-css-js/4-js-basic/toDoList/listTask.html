@@ -77,20 +77,35 @@
               </div>
               <div class="col-md-6 mb-3">
                 <select class="form-control" id="type">
+                  <option value="">Type</option>
                   <option value="1">Studies</option>
                   <option value="2">Home</option>
                   <option value="3">Work</option>
                   <option value="4">Health</option>
+                  <option value="5">Family</option>
                 </select>
               </div>
               <div class="col-md-8 mb-3">
-                <input type="text" id="" placeholder="description">
+                <input type="text" id="description" placeholder="description">
               </div>
               <div class="col-md-4 mb-3">
-                <button type="submit" class="btn btn-dark">Save</button>
-                
+                <button type="button" data-mdb-button-init data-mdb-ripple-init
+                    class="btn btn-dark" onclick="searchTasks()">Search
+                </button>
               </div>
             </form>
+
+            <table class="table mb-4">
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody id="listTasks"></tbody>
+            </table>
+            
           </div>
         </div>
       </div>
