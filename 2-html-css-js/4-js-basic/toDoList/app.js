@@ -10,7 +10,7 @@ class Task {
     validateData() {
         for (let key in this) {
             if (this[key] === undefined || this[key] === "") {
-                console.error(`O campo $[key] é obrigatório.`)
+                console.error(`O campo ${key} é obrigatório.`)
                 return false 
             }
             return true
@@ -32,7 +32,21 @@ class DataBase {
         }
     }
 
-    loadTasks() {}
+    loadTasks() {
+        let tasks = []
+        let id = localStorage.getItem('id')
+
+        for(let i = 1; i <= id; i++) {
+            try {
+                let task = JSON.parse(localStorage.getItem(i))
+                tasks.push(task)
+            } catch (error) {
+                console.error(`Erro ao carregar a tarefa com o id ${id}`)
+            }
+        }
+        return tasks
+
+    }
 
     createTask(task) {
         let id = this.getNextId()
@@ -40,7 +54,9 @@ class DataBase {
         localStorage.setItem('id', id.toString())
     }
 
-    removeTask(id) {}
+    removeTask(id) {
+        localStorage.removeItem(id)
+    }
 
     searchTasks(searchTask) {}
 
@@ -68,3 +84,59 @@ function registerTask() {
         alert('Preencha todos os campos')
     }
 }
+
+function loadTasks(tasks = database.loadTasks()) {
+    let listTask = document.getElementById('listTasks')
+    listTask.innerHTML = ''
+
+    tasks.forEach((task) => {
+        let row = listTask.insertRow()
+
+        row.insertCell(0).innerHTML = `${task.day}/${task.month}/${task.year}`
+
+        row.insertCell(1).innerHTML = getTaskTypeName(task.type)
+        row.insertCell(2).innerHTML = task.description
+
+        let btn = document.createElement('button')
+        btn.className = 'btn btn-danger'
+        btn.id = task.id
+        btn.innerHTML = 'Deletar'
+        btn.onclick = () => {
+            if(confirm('Tem certeza de que deseja excluir a tarefa?')) {
+                database.removeTask(task.id)
+                loadTasks()
+            }
+        }
+
+        row.insertCell(3).append(btn)
+    })
+}
+
+function getTaskTypeName(type) {
+    switch(type) {
+
+        case '1':
+            return 'studies'
+            break
+        case '2':
+            return 'home'
+            break
+        case '3':
+            return 'work'
+            break
+        case '4':
+            return 'health'
+            break
+        case '5':
+            return 'family'
+            break
+        default:
+            return 'Desconhecido'
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    if(document.body.contains(document.getElementById('listTasks'))){
+        loadTasks()
+    }
+})
