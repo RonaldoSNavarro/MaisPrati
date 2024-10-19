@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To Do List</title>
+    <title>Consulta de Endereço</title>
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -16,46 +16,85 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-      crossorigin="anonymous"
-    ></script>
+
     <script src="app.js"></script>
+
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href=""><h1>Consulta de Endereço</h1></a>
+      <a class="navbar-brand" href="#"><h1>Consulta de Endereço</h1></a>
     </nav>
 
-    <section class="100vh" style="background-color: #ccc">
+    <section style="background-color: #ccc; min-height: 100vh;">
       <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col-12">
-            <form class="row justify-content-center align-items-center mb-4">
-              
-              <div class="col-md-8 mb-3">
-                <input type="text" id="cep" placeholder="CEP">
+          <div class="col-md-6">
+            <div class="card shadow">
+              <div class="card-body p-4">
+                <form>
+                  <div class="mb-3">
+                    <label for="cep" class="form-label">CEP</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="cep"
+                      placeholder="Digite o CEP"
+                      onblur="getAddress(this.value)"
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="logradouro" class="form-label">Logradouro</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="logradouro"
+                      placeholder="Digite o logradouro"
+                      disabled
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="bairro" class="form-label">Bairro</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="bairro"
+                      placeholder="Digite o bairro"
+                      disabled
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="cidade" class="form-label">Cidade</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="cidade"
+                      placeholder="Digite a cidade"
+                      disabled
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="uf" class="form-label">UF</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="uf"
+                      placeholder="Digite a UF"
+                      disabled
+                    />
+                  </div>
+
+                  <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">
+                      Consultar
+                    </button>
+                  </div>
+                </form>
               </div>
-              <div class="col-md-8 mb-3">
-                <input type="text" id="logradouro" placeholder="Logradouro">
-              </div>
-              <div class="col-md-8 mb-3">
-                <input type="text" id="bairro" placeholder="Bairro">
-              </div>
-              <div class="col-md-8 mb-3">
-                <input type="text" id="cidade" placeholder="Cidade">
-              </div>
-              <div class="col-md-8 mb-3">
-                <input type="text" id="uf" placeholder="UF">
-              </div>
-              
-            </form>
+            </div>
           </div>
         </div>
       </div>
