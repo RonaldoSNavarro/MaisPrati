@@ -1,18 +1,17 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Corpo da página */
+
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
 }
 
-/* Estilo do header */
+
 header {
     background-color: #000;
     color: white;
@@ -46,14 +45,14 @@ header nav ul li a:hover {
     color: #f9a825;
 }
 
-/* Layout da página */
+
 .container {
     display: flex;
     justify-content: space-between;
     padding: 20px;
 }
 
-/* Estilo do section */
+
 section {
     width: 70%;
     background-color: #fff;
@@ -66,12 +65,15 @@ section h2 {
 }
 
 section img {
+    display: block;
+    margin: auto;
     max-width: 100%;
-    height: auto;
+    height: 50%;
     margin-top: 10px;
+    
 }
 
-/* Estilo do aside */
+
 aside {
     width: 30%;
     background-color: #f9f9f9;
@@ -100,7 +102,7 @@ aside ul li a:hover {
     color: #f9a825;
 }
 
-/* Estilo do footer */
+
 footer {
     background-color: #000;
     color: white;
