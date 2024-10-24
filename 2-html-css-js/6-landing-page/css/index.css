@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #ff0000;
+}
+
+body {
+    position: relative;
+    background-color: #000000;
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    min-height: 100vh;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20%;
+}
+
+.navbar {
+    display: flex;
+}
