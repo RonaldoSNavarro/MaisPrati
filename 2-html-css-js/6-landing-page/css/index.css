@@ -47,6 +47,9 @@ header {
     display: flex;
     width: 100%;
     justify-content: space-around;
+}
+
+.nav li {
     list-style-type: none;
 }
 
@@ -125,7 +128,6 @@ header {
 
 .swiper .swiper-wrapper .swiper-slide img {
     display: block;
-    /* position: absolute; */
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -164,16 +166,12 @@ header {
 
 .swiper .swiper-button-next {
     position: absolute;
-    right: 70%;
+    right: 60%;
     top: 50%;
     width: 60px;
     height: 60px;
     z-index: 100;
-    background-color: blue;
-    line-height: 0;
-    background: transparent;
-    border-radius: 50%;
-    
+    background-color: blue;    
 }
 
 .swiper .swiper-button-next::after,
@@ -184,11 +182,15 @@ header {
     color: rgba(255, 255 , 255, 0.5);
     width: 60px;
     height: 60px;
+    line-height: 0;
+    background: transparent;
+    border-radius: 50%;
 }
 
-.right {
-    max-height: 70vh;
+.modal {
+    display: none;
 }
+
 
 .banner img {
     max-width: 790px;
@@ -232,19 +234,19 @@ header {
     align-items: center;
 }
 
+.banner .left .features .pricing {
+    color: #ffffff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .banner .left .features .content h4 {
     color: #ffffff;
     font-size: 1.5em;
     font-weight: 400;
     letter-spacing: 2px;
     text-transform: uppercase;
-}
-
-.banner .left .features .pricing {
-    color: #ffffff;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
 }
 
 .banner .left .features .content span {

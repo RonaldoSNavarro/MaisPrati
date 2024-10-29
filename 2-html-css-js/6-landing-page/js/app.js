@@ -19,4 +19,34 @@ document.addEventListener('DOMContentLoaded',function() {
             swiper.slideNext()
         }
     })
+
+    const gameInput = document.getElementById('gameInput')
+
+    gameInput.addEventListener('keypress', function (event) {
+        if(event.key === 'Enter') {
+            let searchGame = gameInput.value.trim().toUpperCase()
+
+            switch(searchGame) {
+                case 'MARIO':
+                    swiper.slideTo(0)
+                    break
+
+                case 'POKEMON':
+                    swiper.slideTo(1)
+                    break
+
+                default:
+                    alert('Jogo não encontrado');
+                    break
+            }
+        }
+    })
+
+    const EmailModalBtn = document.getElementById('OpenEmailModal')
+    const emailModal = document.getElementById('emailModal')
+    const closeEmailModalBtn = emailModal.querySelector('.close')
+
+    EmailModalBtn.addEventListener('click', function () {
+        emailModal.style.display = 'block'
+    })
 })
