@@ -1,10 +1,10 @@
-import Login from "../components/login"
+import ProductList from "../components/ProductList"
 
 function App() {
 
   return (
     <>
-      <Login/>
+      <ProductList/>
     </>
   )
 }
