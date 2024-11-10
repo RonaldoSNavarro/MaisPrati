@@ -1,10 +1,10 @@
-import ProductList from "../components/ProductList"
+import ColorSimulator from "../components/ColorSimulator"
 
 function App() {
 
   return (
     <>
-      <ProductList/>
+      <ColorSimulator/>
     </>
   )
 }
