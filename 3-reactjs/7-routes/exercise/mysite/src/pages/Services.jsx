@@ -1,14 +1,17 @@
 import { useNavigate } from "react-router-dom";
 import "../styles/pages.css";
+import { useContext } from "react";
+import AuthContext from "../context/AuthContext";
 
 function Services() {
   const navigate = useNavigate();
+  const { logout } = useContext(AuthContext)
 
   const goToHome = () => {
     navigate("/");
   };
   const goToContatc = () => {
-    navigate("/");
+    navigate("/contact");
   };
 
   return (
@@ -20,6 +23,7 @@ function Services() {
       </ul>
       <button onClick={goToHome}>Home</button>
       <button onClick={goToContatc}>Contato</button>
+      <button onClick={logout}>Logout</button>
     </div>
   );
 }
