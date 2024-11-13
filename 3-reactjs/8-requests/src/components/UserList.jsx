@@ -1,26 +1,17 @@
-import { useState, useEffect } from "react";
-import { getUsers } from '../api/UserService'
+import UseUsers from "../hooks/UseUsers";
 
 const UserList = () => {
-    const [users, setUsers] = useState([])
+  const {users, loading} = UseUsers();
 
-    useEffect(() => {
-        const fetchData = async () => {
-            const response =  await getUsers()
-            setUsers(response.data)
-        }
-        fetchData()
-    }, [])
+  if (loading) return <p>Carregando</p>;
 
-    return(
-        <ul>
-            {users.map((user) => {
-                <li key={user.id}>
-                    {user.name}
-                </li>
-            })}
-        </ul>
-    )
-}
+  return (
+    <ul>
+      {users.map((user) => (
+        <li key={user.id}>{user.name}</li>
+      ))}
+    </ul>
+  );
+};
 
-export default UserList
+export default UserList;
