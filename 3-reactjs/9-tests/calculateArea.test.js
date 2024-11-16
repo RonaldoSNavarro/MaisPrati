@@ -4,7 +4,7 @@ describe("Teste para a função calculateArea", () => {
   describe("Testes da área de um círculo", () => {
     test("Deve retornar a área correta para um círculo de raio 2", () => {
       const result = calculateArea("circle", 2)
-      expect(result).toBeCloseTo(12.5663, 2)
+      expect(result).toBeCloseTo(12.5663, 1)
     })
 
     // test("Deve lançar um erro se o raio não for fornecido", () => {

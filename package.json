@@ -1,5 +1,9 @@
 {
   "dependencies": {
+    "node": "^18.20.5",
     "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }
