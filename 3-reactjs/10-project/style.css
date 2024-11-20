@@ -1,201 +1,200 @@
 :root {
-    --cor-fundo: #f6f1ed;
-    --branco: #fff;
-    --branco-2: #d7d1cd;
-    --preto: #000;
-    --verde-escuro: #1b1e18;
-    --verde-escuro-2: #121410;
-    --cinza-verde: #83908f;
-    --vermelho: #881212;
+    --cor-fundo: #F6F1ED; /* Define a cor de fundo principal da página */
+    --branco: #fff; /* Branco puro */
+    --branco-2: #d7d1cb; /* Tom de branco acinzentado */
+    --preto: #000; /* Preto puro */
+    --verde-escuro: #1B1E18; /* Verde escuro usado para textos e fundos */
+    --verde-escuro-2: #121410; /* Verde ainda mais escuro */
+    --cinza-verde: #83908F; /* Cinza com tonalidade esverdeada */
+    --vermelho: #881212; /* Vermelho intenso, ideal para botões e destaques */
 }
 
 body {
-    background: var(--cor-fundo);
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+    background: var(--cor-fundo); /* Aplica a cor de fundo usando a variável global */
+    margin: 0; /* Remove margens padrão do navegador */
+    padding: 0; /* Remove espaçamento interno padrão */
+    overflow-x: hidden; /* Impede rolagem horizontal indesejada */
 }
 
-/* Estilod - Navegação */
-
-.navigation {
-    width: 100%;
-    min-width: 1090px;
-    z-index: 999;
-    top: 60px;
-    position: absolute;
-    left: 50%;
-    right: 50%;
-    transform: translateX(-50%);
+.Navigation {
+    width: 100%; /* Largura total da tela */
+    min-width: 1090px; /* Define largura mínima para evitar que quebre em telas pequenas */
+    z-index: 999; /* Garante que a navegação fique acima de outros elementos */
+    top: 60px; /* Posição da barra em relação ao topo da página */
+    position: absolute; /* Permite posicionamento livre */
+    left: 50%; /* Centraliza horizontalmente */
+    right: 50%; /* Complementa a centralização */
+    transform: translate(-50%, -50%); /* Move a barra para o centro horizontal */
 }
 
-.navigation-items {
-    padding: 20px;
-    position: relative;
-    float: right;
-    margin-top: 20px;
-    margin-right: 20px;
+.Navigation-itens {
+    padding: 20px; /* Adiciona espaçamento interno para os itens */
+    position: relative; /* Define o posicionamento relativo aos elementos filhos */
+    float: right; /* Alinha os itens à direita */
+    margin-top: 20px; /* Espaçamento superior */
+    margin-right: 20px; /* Espaçamento direito */
 }
 
 .logo-autora {
-    margin-top: 46px;
-    margin-left: 85px;
-    position: relative;
-    width: 250px;
-    float: left;
-    padding: 20px;
+    margin-top: 46px; /* Espaçamento superior */
+    margin-left: 85px; /* Espaçamento esquerdo */
+    position: relative; /* Necessário para posicionamento de elementos internos */
+    width: 250px; /* Largura fixa do contêiner da logo */
+    float: left; /* Alinha o logo à esquerda */
+    padding: 20px; /* Adiciona espaçamento interno */
 }
 
 .cruz {
-    width: 54px;
-    height: 54px;
+    width: 54px; /* Largura fixa da imagem da cruz */
+    height: 54px; /* Altura fixa da cruz */
 }
 
 .nome-navigation {
-    position: absolute;
-    left: 92px;
-    top: 33px;
-    width: 150px;
-    color: white;
-    font-size: 20px;
-    font-family: karma;
-    font-weight: 700;
-    line-height: 30px;
-    word-wrap: break-word;
+    position: absolute; /* Posicionamento livre dentro do contêiner */
+    left: 92px; /* Distância à esquerda */
+    top: 33px; /* Distância do topo */
+    width: 150px; /* Largura fixa */
+    color: white; /* Texto branco */
+    font-size: 20px; /* Tamanho da fonte */
+    font-family: Karma; /* Fonte personalizada */
+    font-weight: 700; /* Texto em negrito */
+    line-height: 30px; /* Altura da linha */
+    word-wrap: break-word; /* Permite quebra de palavras longas */
 }
 
 .items {
-    display: inline-flex;
-    align-items: center;
-    gap: 48px;
+    display: inline-flex; /* Exibe itens em linha e permite flexibilidade */
+    align-items: center; /* Centraliza os itens verticalmente */
+    gap: 48px; /* Espaçamento horizontal entre os itens */
 }
 
 .items p, a {
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--preto);
-    text-decoration: none;
-    overflow: hidden;
-    word-wrap: break-word;
-    white-space: nowrap;
+    font-size: 20px; /* Tamanho da fonte dos textos e links */
+    font-weight: 700; /* Fonte em negrito */
+    color: var(--preto); /* Cor preta definida na variável global */
+    text-decoration: none; /* Remove sublinhado dos links */
+    overflow: hidden; /* Oculta conteúdo excedente */
+    word-wrap: break-word; /* Permite quebra de palavras longas */
+    white-space: nowrap; /* Impede quebra automática de linha */
 }
 
 .items p:hover, a:hover {
-    color: var(--branco);
+    color: var(--branco); /* Altera a cor para branco ao passar o mouse */
 }
 
 .button-navigation {
-    padding-right: 25px;
-    padding-left: 10px;
-    background: var(--verde-escuro);
-    border-radius: 8px;
-    transition: background 0.3s ease;
+    padding-right: 25px; /* Espaçamento interno à direita */
+    padding-left: 10px; /* Espaçamento interno à esquerda */
+    background: var(--verde-escuro); /* Cor de fundo verde escuro */
+    border-radius: 8px; /* Cantos arredondados */
+    transition: background 0.3s ease; /* Animação suave na mudança de fundo */
 }
 
-.button-navigation div.comprarAgora, a#comprarAgora {
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: -4px;
+.button-navigation div.ComprarAgora, a#ComprarAgora {
+    color: white; /* Texto branco */
+    font-size: 20px; /* Tamanho da fonte */
+    font-weight: 500; /* Fonte com peso médio */
+    margin-bottom: -4px; /* Ajusta o alinhamento vertical */
 }
 
 .button-navigation:hover {
-    background-color: var(--vermelho);
-    transition: 0.3s ease;
+    background-color: var(--vermelho); /* Altera a cor de fundo para vermelho ao passar o mouse */
+    transition: 0.3s ease; /* Define uma transição suave para a mudança */
 }
 
 /* Estilos - Main */
 
 .main {
-    width: 100%;
-    height: 1031px;
-    position: relative;
-    top: 350px;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%; /* Ocupa 100% da largura da tela */
+    height: 1031px; /* Define altura fixa da seção principal */
+    top: 350px; /* Define a distância do topo da página */
+    position: absolute; /* Permite posicionamento livre */
+    left: 50%; /* Centraliza horizontalmente em relação ao viewport */
+    right: 50%; /* Complementa a centralização */
+    transform: translate(-50%, -50%); /* Move o elemento para o centro exato */
 }
 
 .background {
-    width: 100%;
-    height: 1031px;
-    position: relative;
-    left: 0px;
-    top: 0px;
-    z-index: -2;
-    background-image: url("./assets/background-2.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: left;
-
+    width: 100%; /* Largura total da tela */
+    height: 1031px; /* Altura fixa igual à seção principal */
+    left: 0px; /* Alinha à extremidade esquerda */
+    top: 0px; /* Alinha ao topo */
+    position: relative; /* Permite posicionamento relativo de elementos internos */
+    z-index: -2; /* Envia o fundo para trás de outros elementos */
+    background-image: url("./assets/background-2.jpg"); /* Imagem de fundo personalizada */
+    background-size: cover; /* Faz a imagem cobrir toda a área da seção */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    background-position: left; /* Posiciona a imagem no lado esquerdo */
 }
 
 .title {
-    font-family: 'Older Dictator';
-    min-width: 600px;
-    left: 113px;
-    top: 294px;
-    position: absolute;
-    color: white;
-    font-size: 90px;
-    line-height: 77.25px;
-    word-wrap: break-word;
-    font-weight: 100;
+    font-family: 'Older Dictator', sans-serif; /* Aplica uma fonte personalizada */
+    min-width: 600px; /* Define largura mínima para evitar colapsos de texto */
+    left: 113px; /* Distância da borda esquerda */
+    top: 294px; /* Distância do topo */
+    position: absolute; /* Permite posicionamento livre */
+    color: white; /* Texto branco */
+    font-size: 90px; /* Tamanho grande para o título */
+    line-height: 77.25px; /* Altura da linha para espaçamento entre palavras */
+    word-wrap: break-word; /* Permite quebra de palavras longas */
+    font-weight: 100; /* Fonte leve para um visual elegante */
 }
 
 .description {
-    width: 580px;
-    left: 110px;
-    top: 500px;
-    position: absolute;
-    color: white;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 30px;
-    word-wrap: break-word;
+    width: 581px; /* Largura fixa para controle de layout */
+    left: 113px; /* Distância da borda esquerda */
+    top: 530px; /* Distância do topo */
+    position: absolute; /* Posicionamento livre */
+    color: white; /* Texto branco */
+    font-size: 18px; /* Tamanho menor do texto */
+    font-family: Karma; /* Aplica uma fonte personalizada */
+    font-weight: 400; /* Peso normal para o texto */
+    line-height: 27px; /* Altura da linha para legibilidade */
+    word-wrap: break-word; /* Permite quebra de palavras longas */
 }
 
 .button-main {
-    width: 300px;
-    height: 50px;
-    padding-top: 15px;
-    padding-bottom: 10px;
-    padding-left: 24px;
-    padding-right: 24px;
-    position: absolute;
-    left: 100px;
-    top: 900px;
-    background: var(--vermelho);
-    border-radius: 8px;
-    justify-content: center;
-    align-items: center;
-    display: inline-flex;
-    white-space: nowrap;
-    color: var(--branco-2);
-    font-weight: 500px;
-    transition: 0.3s ease;
+    width: 300px; /* Largura fixa do botão */
+    height: 48px; /* Altura fixa do botão */
+    padding-top: 14px; /* Espaçamento interno no topo */
+    padding-bottom: 10px; /* Espaçamento interno na parte inferior */
+    padding-left: 24px; /* Espaçamento interno à esquerda */
+    padding-right: 24px; /* Espaçamento interno à direita */
+    left: 113px; /* Distância da borda esquerda */
+    top: 905px; /* Distância do topo */
+    position: absolute; /* Permite posicionamento livre */
+    background: var(--vermelho); /* Fundo vermelho, definido na variável */
+    border-radius: 8px; /* Cantos arredondados */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    display: inline-flex; /* Permite flexbox em linha */
+    white-space: nowrap; /* Impede quebra de linha no texto */
+    color: var(--branco-2); /* Texto com cor de branco acinzentado */
+    font-weight: 500; /* Peso médio da fonte */
+    transition: 0.2s ease; /* Transição suave para alterações */
 }
 
 .button-main:hover {
-    background-color: var(--branco-2);
-    color: var(--verde-escuro);
-    font-weight: 700;
+    background-color: var(--branco-2); /* Altera o fundo para branco acinzentado ao passar o mouse */
+    color: var(--verde-escuro); /* Altera a cor do texto para verde escuro */
+    font-weight: 700; /* Torna o texto em negrito no hover */
 }
 
 .button-main-text {
-    font-size: 16px;
-    line-height: 24px;
-    margin-right: 75px;
-    text-align: center;
-    margin-left: 75px;
-    transition: color 0.3s ease;
+    font-size: 16px; /* Tamanho do texto */
+    font-family: Karma; /* Aplica uma fonte personalizada */
+    line-height: 24px; /* Altura da linha para alinhamento */
+    margin-right: 75px; /* Espaçamento interno à direita */
+    text-align: center; /* Centraliza o texto */
+    margin-left: 75px; /* Espaçamento interno à esquerda */
+    transition: color 0.3s ease; /* Animação suave para mudanças de cor */
 }
 
 .mockup {
-    z-index: -1;
-    position: absolute;
-    width: 800px;
-    height: 800px;
-    left: 50%;
-    top: 220px;
+    z-index: -1; /* Posiciona a imagem atrás de outros elementos */
+    position: absolute; /* Permite posicionamento livre */
+    width: 800px; /* Largura fixa da imagem */
+    height: 850px; /* Altura fixa da imagem */
+    left: 50%; /* Centraliza horizontalmente no viewport */
+    top: 225px; /* Define a distância do topo */
 }
