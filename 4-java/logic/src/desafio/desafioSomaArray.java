@@ -3,7 +3,6 @@ package desafio;
 public class desafioSomaArray {
     public static void main(String[] args) {
         int[] array = new int[11];
-        int i;
 
         array[0] = 1;
         array[1] = 2;
@@ -17,12 +16,24 @@ public class desafioSomaArray {
         array[9] = 10;
         array[10] = 11;
 
-        int soma = 0;
+//        int soma = 0;
+//
+//        for (i = 0; i < array.length; i++) {
+//            soma += array[i];
+//        }
+//        System.out.println("A soma do array é: " + soma);
 
-        for (i = 0; i < array.length; i++) {
-            soma += array[i];
+        int[] newArray = new int[array.length + 1];
+
+        for (int j = 0; j < array.length; j++) {
+            newArray[j] = array[j];
         }
-        System.out.println("A soma do array é: " + soma);
+
+        newArray[array.length] = 1;
+
+        for (int i = 0; i < newArray.length; i++) {
+            System.out.println(newArray[i]);
+        }
 
     }
 }
