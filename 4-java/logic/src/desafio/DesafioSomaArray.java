@@ -1,6 +1,6 @@
 package desafio;
 
-public class desafioSomaArray {
+public class DesafioSomaArray {
     public static void main(String[] args) {
         int[] array = new int[11];
 

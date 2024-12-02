@@ -1,6 +1,6 @@
 package desafio;
 
-public class desafioExcluiItemArray {
+public class DesafioExcluiItemArray {
     public static void main(String[] args) {
         int[] array = new int[11];
 

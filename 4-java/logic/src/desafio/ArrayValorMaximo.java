@@ -1,6 +1,6 @@
 package desafio;
 
-public class arrayValorMaximo {
+public class ArrayValorMaximo {
     public static void main(String[] args) {
         int[] array = new int[11];
         int maior = 0;
