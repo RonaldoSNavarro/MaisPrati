@@ -1,0 +1,15 @@
+Sistema com Múltiplis Relacionamentos
+
+Modele um sistema de universidade:
+
+Classe Universidade:
+Atributos: nome, departamentos (lista de objetos do tipo Departamento).
+
+Classe Departamento:
+Atributos: nome, professores (lista de objetos do tipo Professor).
+
+Classe Professor:
+Atributos: nome, disciplinas (lista de objetos do tipo Disciplina).
+
+Classe Disciplina:
+Atributos: nome.

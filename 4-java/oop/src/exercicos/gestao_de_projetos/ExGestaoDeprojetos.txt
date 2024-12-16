@@ -1,0 +1,12 @@
+Modele um sistema de gestão de projetos com as seguintes classes:
+
+Classe Projeto:
+Atributos: nome, membos (uma lista de objetos do tipo Pessoa).
+Métodos: adicionarMembro() e listarMembro().
+
+Classe Pessoa:
+Atributos: nome, projetos (uma lista de objetos do tipo Projeto).
+Métodos: adicionarProjeto().
+
+Garanta que, ao adicionar um membro a um projeto, o projeto seja automaticamente
+associado ao membro e vice-versa.
