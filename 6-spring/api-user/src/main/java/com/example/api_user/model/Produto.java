@@ -1,26 +1,22 @@
 package com.example.api_user.model;
 
-
-import jakarta.persistence.*;
-import lombok.*;
-
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
-public class Usuario {
-
+public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
+    private Double preco;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "profile_id", referencedColumnName = "id")
-    private Profile profile;
-
-    public Usuario(Long id, String nome, String email) {
+    public Produto(Long id, String nome, Double preco) {
         this.id = id;
         this.nome = nome;
-        this.email = email;
+        this.preco = preco;
     }
 
     public Long getId() {
@@ -39,13 +35,11 @@ public class Usuario {
         this.nome = nome;
     }
 
-    public String getEmail() {
-        return email;
+    public Double getPreco() {
+        return preco;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setPreco(Double preco) {
+        this.preco = preco;
     }
-
-    private String email;
 }
